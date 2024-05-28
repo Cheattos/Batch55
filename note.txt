@@ -1,0 +1,55 @@
+1. Apa itu HTML?
+. HTML atau Hypertext markup language adalah sebuah bahasa yang digunakan untuk membuat sebuah kerangka website
+
+2. CSS atau Cascading Style Sheets
+. sebuah tools untuk memperindah halaman website yang kita buat
+
+3. Href adalah Hypertext Referance
+. untuk mengarahkan sebuah menuju ke halaman tertentu
+
+4. <br>
+. berfungsi untuk membuat yang ada dibelakangnya di tempatkan di baris baru atau enter
+
+5. format CSS
+. Secara default pembuatan css tidak ada bedanya, untuk kasta urutan yang akan diaplikasikan adalah 
+1. Inline CSS
+2. Internal CSS
+3. External CSS
+
+- Misal kita import css dari luar (bootstrap) secara default kita dapat ganti menggunakan !important
+
+6. perbedaan ul dan ol dalam list
+. jika ul akan menampilkan titik, jika ol akan menampilkan angka
+
+7. Semantik (tag block cari w3school apa aja isinya)
+Elemen semantik adalah elemen-elemen yang menyatakan makna atau tujuan dari elemen itu sendiri.
+
+8. perbedaan class dan id
+. class itu biasanya khusus untuk styling, id biasanya untuk fungsi javascript, tapi keduanya bisa digunakan di styling maupun javascript
+
+9. margin adalah sebuah style untuk mengatur jarak antara content dengan sisi luarnya
+
+  ini untuk mengatur jarang yang ada diatasnya
+  margin-top: 10px;
+
+  ini untuk mengatur jarang yang ada kirinya
+  margin-left: 30px;
+
+  ini untuk mengatur jarang yang ada kanannya
+  margin-right: 45px;
+
+  ini untuk mengatur jarang yang ada bawahnya
+  margin-bottom: 70px;
+
+  ini akan mengatur atas kiri kanan bawahnya secara sama ukurannya
+  margin: 70px;
+
+
+10. padding adalah style untuk memberi jarak tapi didalam contentnya dengan pembungkusnya, pemanggilnya
+    padding-top
+    padding-left
+    padding-right
+    padding-bottom
+
+
+11. Setiap apapun yang ingin kita rubah bisa kita lakukan menggunakan CSS!!!
