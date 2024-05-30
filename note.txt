@@ -1,0 +1,38 @@
+1. Perbedaan Keyword (variable)
+- var = ini ketika kita melakukan perubahan valuenya atau nilai dari variable dapat diubah
+- let = ini ketika didalam sebuah function atau deklarasi ulang kemudian dia nilainya tidak dapat diubah
+- const = nilai dari varibale tidak dapat diubah ubah dalam kondisi apapun
+
+2. Tipe Data
+- var = ini adalah angka yang langsung ditulisin aja ( 1,2,3,4,5)
+- string = ini adalah sebuah text yang dituliskan dengan tanda petik, mau 1 ataupun 2 ( 'ini pake petik 1', "ini pake petik")
+
+3. Hoisting
+Didalam javascript terdapat sebuah fitur bawaan dimana, ketika sebuah varibale belum dideklrasikan itu ketika kita proses
+akan tetap dieksekusi oleh javascript, sehingga tidak memunculkan error, dan memunculkan undefinded(belum didefinisikan)
+
+contoh :
+x = 5
+y = 1
+consol.log(x + y);
+
+var x,y;
+
+ini tetap bisa dieksekusi tapi menghasilan undefinded
+
+
+4. Tipe Data
+- array
+const cars = ["Saab","Volvo","BMW"];
+	 index = [  0,      1,    2   ]
+    
+ada berapa item dalam array = 3
+ada berapa index dalam array = 2
+
+document.getElementById("demo").innerHTML = cars[2];
+
+5. typeof
+ini mendefinisikan tipe data apa yang dipake oleh content yang kita tuliskan
+typeof "John Doe";  tipe data = string
+typeof 1; tipe data = number
+
