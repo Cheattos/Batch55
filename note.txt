@@ -1,0 +1,18 @@
+1. Apa itu OOP?
+- Object Oriented Programming : Merupakan sebuah konsep untuk menyelesaikan permasalah menjadi lebih mudah dengan menjadikan kode menjadi Object
+
+
+2. Isi dari OOP
+
+- Class
+Merupakan sebuah kerangka dari object yang akan kita buat
+> Properties dan Methode
+Properti : apa saja yang ada didalam object -> bisa kita masukan value/nilai didalamnya
+Methode : sebuah perintah yang didimiliki dalam object
+
+Properties          Value
+Color               Red
+
+
+Methode
+sit, come
