@@ -1,34 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <link rel="stylesheet" href="assests/css/index.css">
-    <link rel="stylesheet" href="assests/css/blog.css">
+    <title>Creating Blog Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assests/css/index.css" />
+    <link rel="stylesheet" href="assests/css/blog.css" />
 </head>
 
 <body>
-    <nav style="background-color: rgb(238, 238, 238); height: 80px;">
+    <!-- NavBar -->
+    <nav style="background-color: #f4f3f3; height: 75px;">
         <div style="display: flex; align-items: center; height: 100%; margin-left: 30px; margin-right: 30px;">
-            <ul style="display: flex; list-style-type: none; gap: 45px; align-items: center;">
+            <ul style="display: flex; list-style-type: none; gap: 50px; align-items: center;">
                 <li>
-                    <img style="height: 50px;" src="assests/images/dumbways.png" alt="logo dumbways">
+                    <img src="assests/images/dumbways.png" style="height: 50px;" />
                 </li>
-                <li class="nav-link">
-                    <a href="index.html">Home</a>
+                <li class="nav-link nav-collapse">
+                    <a href="index.html">
+                        Home
+                    </a>
                 </li>
-                <li class="nav-link">
-                    <a href="blog.html">Blog</a>
+                <li class="nav-link nav-collapse">
+                    <a href="blog.html">
+                        Blog
+                    </a>
                 </li>
             </ul>
-
             <div style="display: flex; width: 100%; justify-content: end;">
-                <a href="contact.html" class="btn-contact">Contact Me</a>
+                <a href="contact.html" class="btn-contact nav-collapse">Contact me</a>
+                <i class="fa-solid fa-bars" style="cursor: pointer;" id="humberger-button"
+                    onclick="openHumberger()"></i>
             </div>
         </div>
     </nav>
+    <div class="humberger-nav-container" id="humberger-nav-container">
+        <a href="index.html" class="active">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact Me</a>
+    </div>
 
     <div class="blog">
         <div class="blog-form">
@@ -36,32 +48,37 @@
                 <form onsubmit="submitBlog(event)">
                     <h1>Create Post Blog</h1>
                     <div>
-                        <label for="title">Title</label>
-                        <input type="text" id="inputTitle">
+                        <label for="inputTitle">Title</label>
+                        <input type="text" id="inputTitle" />
                     </div>
                     <div>
-                        <label for="content">Content</label>
+                        <label for="inputContent">Content</label>
                         <textarea id="inputContent"></textarea>
                     </div>
                     <div>
-                        <label for="image">Upload Image</label>
-                        <input type="file" id="inputImage">
+                        <label>Upload Image</label>
+                        <div class="input-blog-image-group">
+                            <label for="inputImage">
+                                <p>Attach File</p>
+                                <img src="assests/images/file.png" alt="file" />
+                            </label>
+                            <input type="file" id="inputImage" hidden />
+                        </div>
                     </div>
-                    <div class="button-input">
+                    <div class="button-group">
                         <button>Post Blog</button>
                     </div>
                 </form>
             </div>
         </div>
 
-        <hr class="line">
-        <div id="content" class="blog-list">
-
+        <hr class="line" />
+        <div id="contents" class="blog-list">
+            <!-- dynamic content would be here -->
         </div>
     </div>
-
     <script src="assests/js/blog.js"></script>
-
+    <script src="assests/js/nav.js"></script>
 </body>
 
 </html>

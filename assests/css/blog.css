@@ -35,6 +35,30 @@
     resize: none;
 }
 
+.blog-form form .input-blog-image-group {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    background: #f4f3f3;
+    border: 1px solid #c4c4c4;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.blog-form form .input-blog-image-group label p {
+    font-size: 15px;
+}
+
+.blog-form form .input-blog-image-group label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .blog-form form .button-input{
     text-align: right;
 }
