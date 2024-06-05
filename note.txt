@@ -16,3 +16,86 @@ Color               Red
 
 Methode
 sit, come
+
+
+------------------HOF-------------------------
+1. MAP
+Metode map() digunakan untuk membuat array baru dengan hasil dari 
+pemanggilan fungsi tertentu pada setiap elemen dalam array yang dipanggil.
+
+const numbers = [1, 2, 3, 4, 5];
+
+
+const doubledNumbers = numbers.map(function(num) {
+    return num * 2;
+    num merupakan kata ganti atau pengaliasan nama dari variable numbers
+});
+
+console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
+didapat outputnya karena si numbers sudah diganti num dan dikali 2, sehingga outputnya seperti yg didatas
+
+2. Filter
+Metode filter() digunakan untuk membuat array baru yang berisi elemen-elemen dari array yang memenuhi 
+kondisi yang ditentukan dalam sebuah fungsi.
+
+const numbers = [1, 2, 3, 4, 5];
+
+const evenNumbers = numbers.filter(function(num) {
+    return num % 2 === 0;
+    dari hasil modulo 2 yang menghasilkan nilai 0 adalah 2 dan 4
+});
+
+console.log(evenNumbers); // Output: [2, 4]
+outpunya hanya akan menampilkan hasil yang sesuai dari filter(penyaringan) dari modulo 2 dari 
+variable numbers yang siubah jadi num 
+
+
+const numbers = [1, 2, 3, 4, 5];
+
+const evenNumbers = numbers.filter(function (num) {
+  return num % 2 === 1;
+});
+
+console.log(evenNumbers); //outputnya [ 1, 3, 5 ]
+
+
+3. Foreach
+Metode forEach() adalah metode yang menjalankan fungsi tertentu s
+ekali untuk setiap elemen dalam array.
+
+-Hanya mengemablikan sebuah tampilan (log) tidak mengembalikan return (undefinded)
+
+const angka = [1, 2, 3, 4, 5];
+
+angka.forEach(function(elemen) {
+  console.log(elemen);
+});
+
+// Output:
+1
+2
+3
+4
+5
+
+Metode forEach() tidak mengembalikan nilai (return undefined). Ia hanya digunakan untuk 
+melakukan operasi pada setiap elemen array, seperti menampilkan elemen atau mengubah elemen 
+dalam array tersebut.
+
+4. reduce
+Metode reduce() digunakan untuk mereduksi array menjadi nilai tunggal berdasarkan fungsi 
+yang diberikan, yang dapat berupa penjumlahan, penggabungan, atau operasi lainnya.
+
+const numbers = [1, 2, 3, 4, 5];
+
+const sum = numbers.reduce(function(total, num) {
+    return total + num;
+}, 0);
+
+// 0 adalah nilai awal, sehingga
+total = total + (isi dari number)
+0 = 0 + 1
+1 = 1 + 2
+3 = 3 + 3
+
+console.log(sum); // Output: 15
