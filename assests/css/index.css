@@ -1,0 +1,11 @@
+.active{
+    color: orangered !important;
+}
+
+.btn-danger{
+     background-color: orangered !important;
+}
+
+textarea{
+    resize: none;
+}
