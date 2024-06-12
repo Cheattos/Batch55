@@ -1,0 +1,15 @@
+Alasan kenapa pake template engine
+1. sebagai referensi bahwa ada template engine dan banyak jenisnya
+2. ini digunakan sebagai bahan pembelajaran awal sebelum ke advance javascript
+3. template engine mudah dipahami untuk pemula
+4. penerapanya digunakan untuk pemanggilan di javascript(index.js), jika
+tidak pake template engine halamanya tidak bisa dirender di js nya
+
+
+Diperusahaan
+1. tidak pake template engine
+2. biasanya pake framework
+3. biasanya pake typescript
+4. framworknya itu sudah overpower
+5. Server : Laravel, nest.js
+6. Client : next.js vite.js (React)

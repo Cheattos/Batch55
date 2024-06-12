@@ -1,0 +1,11 @@
+{
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon Day-11/index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "hbs": "^4.2.0",
+    "nodemon": "^3.1.3"
+  }
+}
