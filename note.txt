@@ -1,0 +1,26 @@
+M sopan sopian = 1
+charvar = adalah tipe data dia menerima inputan huruf, angka, karakter, simbol 
+255 = panjang si kolom menerima inputannya (batas) -> maksimal batasnya 255 pd database
+
+rifki point -10 (nagatin harry) -10 (gak jawab)
+
+Apa itu ORM (Object Relation Mapping) = Adalah teknik yang bisa kita pake untuk menerapkan
+kodingan sql didalam aplikasi kita
+
+APa itu Sequalize(tools) = ORM yang membantu kita untuk berkomunikasi ke database
+
+https://sequelize.org/docs/v7/cli/ ikutin langkahnya
+
+npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
+ini untuk bikin model baru berdasarkan namanya yaitu User
+setaip kita bikin model baru akan selalu otomatis dibikinkan file migration
+
+npx sequelize-cli db:migrate
+migration akan diproses oleh sequalize mengtraslate kode kita menjadi kode query yang diterima oleh database
+
+secara otomatis akan ada datanya di database
+
+
+config -> megatur sambungan atau hubungan antara aplikasi kita ke database
+
+
