@@ -1,0 +1,4 @@
+password : 1234567 -> encryp : 2$jjk-009P/.rrewqdacdwaf
+
+session (sesi) -> penyimpanan data sementara yg memilik batasan waktu tertentu
+			(cookie)

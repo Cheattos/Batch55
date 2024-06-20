@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <title>Creating Blog Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assests/css/index.css" />
+    <link rel="stylesheet" href="assests/css/blog.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="assests/images/dumbways.png" style="height: 50px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/testimonial">Testimonial</a>
+                    </li>
+                </ul>
+
+                {{#if isLogin}}
+                <p>Welcome, {{user.name}}</p>
+                <a href="/logout"><button class="btn btn-danger me-2">Loggout</button></a>
+                {{else}}
+                <a href="/login"><button class="btn btn-danger me-2">Login</button></a>
+                <a href="/register"><button class="btn btn-danger me-2">Register</button></a>
+                {{/if}}
+                
+                <a href="/contact"><button class="btn btn-danger" type="submit">Contact Me</button></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                {{!-- methode post menandakan bahwa dia mengirimkan data baru --}}
+                <form method="post" action="/add-blog">
+                    <h1 class="text-center mb-4">Create Post Blog</h1>
+                    <div class="form-group mb-3">
+                        <label for="inputTitle">Title</label>
+                        <input type="text" class="form-control" id="inputTitle" name="title" />
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="inputContent">Content</label>
+                        <textarea class="form-control" id="inputContent" rows="10" name="content"></textarea>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="formFile" class="form-label">Upload Image</label>
+                        <input class="form-control" type="file" id="inputImage">
+                    </div>
+                    <button type="submit" class="btn btn-danger btn-block">Post Blog</button>
+                </form>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div id="contents" class="blog-list">
+            
+        </div>
+    </div>
+    {{!-- <script src="assests/js/blog.js"></script> --}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

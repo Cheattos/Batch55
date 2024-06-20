@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <title>Personal Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assests/css/index.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="assests/images/dumbways.png" style="height: 50px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/testimonial">Testimonial</a>
+                    </li>
+                </ul>
+
+                {{#if isLogin}}
+                <p>Welcome, {{user.name}}</p>
+                <a href="/logout"><button class="btn btn-danger me-2">Loggout</button></a>
+                {{else}}
+                <a href="/login"><button class="btn btn-danger me-2">Login</button></a>
+                <a href="/register"><button class="btn btn-danger me-2">Register</button></a>
+                {{/if}}
+
+                <a href="/contact"><button class="btn btn-danger" type="submit">Contact Me</button></a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container d-flex justify-content-center">
+        <div class="w-50">
+            <h3 class="mt-5">Register</h3>
+
+            {{#if messages.danger}}
+            <div class="alert alert-danger" role="alert">
+                <div class="container">
+                    {{messages.danger}}
+                </div>
+            </div>
+            {{/if}}
+
+            <form action="/register" method="POST">
+                <div class="mb-3">
+                    <label for="text" class="form-label">Username</label>
+                    <input type="text" name="name" class="form-control" id="name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="email" class="form-control" id="email">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control" id="password">
+                </div>
+                <button type="submit" class="btn btn-danger mt-3 px-5">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
