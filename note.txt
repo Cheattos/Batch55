@@ -1,0 +1,19 @@
+Relasi ada 3
+- One to One
+- One to Many
+- Many to Many
+
+Relasi harus berhubungan dengan table lain melalui foreign key dan primary key
+- Primary key = kunci unik (data) yang di dalam tabel tersebut datannya tidak ada yg sama, kunci pada tiap table hanya 1
+misal : id = 1, id = 2, id = 3
+misal : nik : 118140, nik = 118141
+
+- foreign key = kunci yang berisi dari primary key tabel yg dihubungkan, bisa lebih dari 1
+misal : 
+table dosen - > primary ke 1
+tabel mhs   - > primary key 5
+                foreign key 1 (ini dari table dosen)
+kenapa bloleh lebih dari 1 foreign key?
+- karena : dia tidak harus unik / spesial, dia bisa terhubung ke banyak table lain
+misal : table dosen -> table matkul -> table prodi -> table jurusan -> table kampus -> table kepegawaian
+jadi ditable dosen ada 5 foreign key (one to many)
